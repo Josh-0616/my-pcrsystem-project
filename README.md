@@ -135,12 +135,13 @@ Main tables:
 ├── 📁 uploads/
 ├── 📁 webfonts/
 │
-├── 📄 index.php
+├── 📄 landing.php
 ├── 📄 LearnMore.php
 ├── 📄 login.php
 ├── 📄 login_check.php
 ├── 📄 login_process.php
 ├── 📄 logout.php
 └── 📄 register.php
+
 
 
