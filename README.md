@@ -1,32 +1,34 @@
-# 📘 PCR Performance Commitment and Review System  
+# 📘 PCR (Performance Commitment and Review) System  
 
 ## 🏫 Overview  
 The **PCR System** (Performance Commitment and Review) is a web-based platform developed for **Philippine Countryville College, Inc.** It allows administrators and faculty to manage performance evaluations, submissions, and ratings digitally.  
 
-This system streamlines the evaluation process by allowing users to submit PCR forms, track performance, and generate reports efficiently.  
+This system simplifies the performance evaluation workflow by allowing users to create, submit, review, and rate PCR forms. It ensures transparency, accuracy, and faster report generation for institutional performance monitoring.  
 
 ---
 
 ## ⚙️ Features  
 
 ### 👩‍💼 Admin Panel  
-- Manage users (faculty)  
+- Manage users (Faculty and Staff)  
 - View, approve, and rate PCR submissions  
-- Generate reports per department  
-- View analytics and statistics  
-- Manage announcements and deadlines  
-- Recycle bin and restore options  
-- Dark/Light mode toggle  
+- Generate reports per department (BSBA, BSIT, BS-CRIME)  
+- View analytics and statistics with charts  
+- Manage announcements and set deadlines  
+- Recycle bin with restore and permanent delete options  
+- View and download generated PDF reports  
+- Activity logs and notifications system  
+- Responsive modern UI with dark/light mode toggle  
 
 ### 👨‍🏫 Faculty Panel  
-- Submit and edit PCR forms  
+- Submit, edit, and delete PCR forms  
+- Track submission status (Pending, Reviewed, Approved)  
 - View submission history and total submissions  
-- Track PCR status (Pending, Reviewed, Approved)  
 - View announcements and deadlines  
 - Generate personal PCR reports in PDF  
-- Manage account and change password  
-- Recycle bin for deleted submissions  
-- Dark/Light mode toggle  
+- Manage profile and change password  
+- Access recycle bin for deleted submissions  
+- Responsive dashboard with dark/light mode toggle  
 
 ---
 
@@ -35,68 +37,93 @@ This system streamlines the evaluation process by allowing users to submit PCR f
 - **Backend:** PHP 8  
 - **Database:** MySQL  
 - **PDF Generation:** TCPDF  
-- **JavaScript:** Chart.js for analytics  
+- **JavaScript Libraries:** Chart.js for analytics and stats  
+- **Email System:** PHPMailer  
 - **Authentication:** PHP Session-based Login  
-- **UI Design:** Glassmorphism & Soft Modern UI with Responsive Design  
+- **UI Design:** Glassmorphism & Soft Modern UI with Responsive Layout  
 
 ---
 
 ## 🗄️ Database Structure  
 **Database Name:** `apps_pcc_db`  
 
-Main tables:
-- `users` — stores account details and roles (admin, faculty, staff)  
-- `ipcr_forms` — stores submitted IPCR form data  
-- `ipcr_entries` — stores PCR performance indicators  
-- `ratings` — stores admin ratings and remarks  
-- `logs` — activity logs  
-- `notifications` — announcement and alert system  
+Main Tables:  
+| Table Name | Description |
+|-------------|-------------|
+| `users` | Stores user details, roles (admin, faculty, staff), and login credentials |
+| `ipcr_forms` | Stores each submitted IPCR form by faculty |
+| `ipcr_entries` | Contains performance indicators or commitments |
+| `ratings` | Stores admin ratings, comments, and average performance score |
+| `logs` | Tracks user activities (login, submission, updates) |
+| `notifications` | Handles announcements and system notifications |
 
 ---
 
 ## 📂 Project Folder Structure  
+
 📁 **PCC_PCR_SYSTEM/**  
 ├── 📁 asset/  
+│   └── *(images, CSS, JS, icons, and other resources)*  
+│  
 ├── 📁 dashboard/  
 │   ├── 📄 about.php  
+│   ├── 📄 add_announcement.php  
 │   ├── 📄 admin_dashboard.php  → with sidebar & topbar  
-│   ├── 📄 manage_users.php  
-│   ├── 📄 announcements.php  
-│   ├── 📄 recycle_bin.php  
-│   ├── 📄 status_report.php  
-│   ├── 📄 department_reports.php  
-│   ├── 📄 view_ipcr_submissions.php  
-│   └── (other admin-related files)  
+│   ├── 📄 announcements.php    → with sidebar & topbar  
+│   ├── 📄 deadline_settings.php → with sidebar & topbar  
+│   ├── 📄 department_reports.php → with sidebar & topbar  
+│   ├── 📄 manage_users.php     → with sidebar & topbar  
+│   ├── 📄 recycle_bin.php      → with sidebar & topbar  
+│   ├── 📄 status_report.php    → with sidebar & topbar  
+│   ├── 📄 view_ipcr_submissions.php → with sidebar & topbar  
+│   ├── 📄 view_analytics.php   → charts and statistics  
+│   ├── 📄 rate_form.php / rate_staff.php  
+│   ├── 📄 editprofile.php / update_profile.php  
+│   ├── 📄 generate_pdf.php / generate_submission_pdf.php  
+│   ├── 📄 generate_code_registration.php  
+│   ├── 📄 notifications.php  
+│   ├── 📄 restore_submission.php / delete_ipcr.php  
+│   └── *(other admin-related PHP files)*  
 │  
 ├── 📁 faculty/  
-│   ├── 📄 faculty_dashboard.php  
-│   ├── 📄 my_submissions.php  
-│   ├── 📄 recycle_bin.php  
-│   ├── 📄 submit_ipcr.php  
-│   ├── 📄 view_announcements.php  
-│   └── (other faculty-related files)  
+│   ├── 📄 faculty_dashboard.php → with sidebar & topbar  
+│   ├── 📄 my_submissions.php    → with sidebar & topbar  
+│   ├── 📄 submit_ipcr.php       → with sidebar & topbar  
+│   ├── 📄 view_announcements.php → with sidebar & topbar  
+│   ├── 📄 recycle_bin.php       → with sidebar & topbar  
+│   ├── 📄 My_Account.php / Change_Password.php  
+│   ├── 📄 My_Approved_IPCRs.php / My_Pending_Reviews.php  
+│   ├── 📄 My_Total_Submissions.php  
+│   ├── 📄 generate_pdf.php / generatePDF.php  
+│   ├── 📄 edit_submission.php / delete_submission.php  
+│   ├── 📄 restore_submission.php / move_to_recycle_bin.php  
+│   └── *(other faculty-related PHP files)*  
 │  
 ├── 📁 db/  
 │   ├── 🗄️ apps_pcc_db.sql  
 │   └── 📄 connection.php  
 │  
-├── 📁 tcpdf/  
-├── 📁 uploads/  
+├── 📁 libs/  
 ├── 📁 pdfs/  
 ├── 📁 PHPMailer/  
+├── 📁 tcpdf/  
+├── 📁 TCPDF - main/  
+├── 📁 uploads/  
+├── 📁 webfonts/  
 │  
-├── 📄 landing.php  
+├── 📄 index.php (Landing Page)  
 ├── 📄 LearnMore.php  
 ├── 📄 login.php  
-├── 📄 register.php  
+├── 📄 login_check.php  
+├── 📄 login_process.php  
 ├── 📄 logout.php  
-└── 📄 login_process.php  
+└── 📄 register.php  
 
 ---
 
 ## 🚀 How to Run the Project  
 
-1. Clone or download this repository.  
-2. Move the folder to your `htdocs` directory (for XAMPP).  
-3. Import the database file `apps_pcc_db.sql` located inside the `/db` folder.  
-4. Open your browser and go to:  
+1. **Clone or download** this repository.  
+2. **Move** the project folder to your XAMPP `htdocs` directory.  
+   ```bash
+   C:\xampp\htdocs\PCC_PCR_SYSTEM
