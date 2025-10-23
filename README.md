@@ -144,7 +144,6 @@ This system streamlines the evaluation process by allowing users to submit PCR f
 │   ├── 📄 view_announcements.php  ---> naay sidebar ug topbar  
 │   ├── 📄 view_profile.php  
 │   └── 📄 view_submission.php  
-│
 ├── 📁 **libs/**  
 ├── 📁 **pdfs/**  
 ├── 📁 **PHPMailer/**  
@@ -152,7 +151,6 @@ This system streamlines the evaluation process by allowing users to submit PCR f
 ├── 📁 **TCPDF - main/**  
 ├── 📁 **uploads/**  
 ├── 📁 **webfonts/**  
-│
 ├── 📄 landing.php  
 ├── 📄 LearnMore.php  
 ├── 📄 login.php  
@@ -180,3 +178,4 @@ Created by **Group 3** — Bachelor of Science in Information Technology (BSIT).
 ✅ **Database:** `apps_pcc_db` (21 tables)  
 ✅ **PHP Version:** 8.x  
 ✅ **Last Updated:** October 2025
+
