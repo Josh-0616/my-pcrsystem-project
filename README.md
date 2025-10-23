@@ -119,11 +119,5 @@ Main Tables:
 ├── 📄 logout.php  
 └── 📄 register.php  
 
----
 
-## 🚀 How to Run the Project  
 
-1. **Clone or download** this repository.  
-2. **Move** the project folder to your XAMPP `htdocs` directory.  
-   ```bash
-   C:\xampp\htdocs\PCC_PCR_SYSTEM
