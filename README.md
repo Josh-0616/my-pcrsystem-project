@@ -19,7 +19,7 @@ This system streamlines the evaluation process by allowing users to submit PCR f
 - Dark/Light mode toggle  
 
 ### 👨‍🏫 Faculty Panel  
-- Submit and edit IPCR forms  
+- Submit and edit PCR forms  
 - View submission history and total submissions  
 - Track PCR status (Pending, Reviewed, Approved)  
 - View announcements and deadlines  
@@ -36,7 +36,7 @@ This system streamlines the evaluation process by allowing users to submit PCR f
 - **Database:** MySQL  
 - **PDF Generation:** TCPDF 
 - **JavaScript:** Chart.js for analytics  
-- **Authentication:** PHP Session-based Login + Google Sign-In  
+- **Authentication:** PHP Session-based Login
 - **UI Design:** Glassmorphism & Soft Modern UI with Responsive Design  
 
 ---
@@ -47,7 +47,7 @@ This system streamlines the evaluation process by allowing users to submit PCR f
 Main tables:
 - `users` — stores account details and roles (admin, faculty, staff)  
 - `ipcr_forms` — stores submitted IPCR form data  
-- `ipcr_entries` — stores IPCR performance indicators  
+- `ipcr_entries` — stores PCR performance indicators  
 - `ratings` — stores admin ratings and remarks  
 - `logs` — activity logs  
 - `notifications` — announcement and alert system  
@@ -60,14 +60,14 @@ Main tables:
 ├── 📁 dashboard/
 │   ├── 📄about.php
 │   ├── 📄add_announcement.php
-│   ├── 📄admin_dashboard.php  ---nay sidebar 
+│   ├── 📄admin_dashboard.php  ---> naay sidebar ug topbar
 │   ├── 📄admin_view_profile.php
-│   ├── 📄announcements.php    ---nay sidebar 
+│   ├── 📄announcements.php    ---> naay sidebar ug topbar 
 │   ├── 📄Change_Password.php
-│   ├── 📄deadline_settings.php     ---nay sidebar 
+│   ├── 📄deadline_settings.php     ---> naay sidebar ug topbar 
 │   ├── 📄delete_announcement.php
 │   ├── 📄delete_ipcr.php
-│   ├── 📄department_reports.php   ---nay sidebar 
+│   ├── 📄department_reports.php   ---> naay sidebar ug topbar 
 │   ├── 📄editprofile.php
 │   ├── 📄empty_recycle_bin.php
 │   ├── 📄generate.php
@@ -75,7 +75,7 @@ Main tables:
 │   ├── 📄generate_pdf.php
 │   ├── 📄generate_submission_pdf.php
 │   ├── 📄get_faculty_profile.php
-│   ├── 📄manage_users.php  ---nay sidebar 
+│   ├── 📄manage_users.php  ---> naay sidebar ug topbar
 │   ├── 📄mark_announcement_read.php
 │   ├── 📄mark_read.php
 │   ├── 📄my_account.php
@@ -87,16 +87,16 @@ Main tables:
 │   ├── 📄profile.php
 │   ├── 📄rate_form.php 
 │   ├── 📄rate_staff.php 
-│   ├── 📄recycle_bin.php    ---nay sidebar 
+│   ├── 📄recycle_bin.php    ---> naay sidebar ug topbar
 │   ├── 📄restore_submission.php
 │   ├── 📄save_rating.php 
-│   ├── 📄status_report.php  ---nay sidebar 
+│   ├── 📄status_report.php  ---> naay sidebar ug topbar 
 │   ├── 📄submit_ipcr.php 
 │   ├── 📄update_ipcr.php 
 │   ├── 📄update_profile.php 
 │   ├── 📄view_analytics.php 
 │   ├── 📄view_faculty_profile.php
-│   ├── 📄view_ipcr_submissions.php    ---nay sidebar 
+│   ├── 📄view_ipcr_submissions.php    ---> naay sidebar ug topbar 
 │   ├── 📄view_submission.php 
 │   └── 📄viewprofile.php
 │
@@ -110,20 +110,20 @@ Main tables:
 │   ├── 📄delete_submission.php 
 │   ├── 📄 edit_submission.php
 │   ├── 📄faculty_announcements.php
-│   ├── 📄faculty_dashboard.php   ---nay sidebar 
+│   ├── 📄faculty_dashboard.php   ---> naay sidebar ug topbar 
 │   ├── 📄generate_pdf.php 
-│   ├── 📄generatePDF.php  ---nay sidebar 
+│   ├── 📄generatePDF.php  ---> naay sidebar ug topbar
 │   ├── 📄move_to_recycle_bin.php 
 │   ├── 📄My_Account.php
 │   ├── 📄My_Approved_IPCRs.php 
 │   ├── 📄My_Pending_Reviews.php 
-│   ├── 📄my_submissions.php   ---nay sidebar 
+│   ├── 📄my_submissions.php   ---> naay sidebar ug topbar
 │   ├── 📄My_Total_Submissions.php 
-│   ├── 📄recycle_bin.php    ---nay sidebar 
+│   ├── 📄recycle_bin.php    ---> naay sidebar ug topbar
 │   ├── 📄restore_submission.php
 │   ├── 📄save_ipcr.php 
-│   ├── 📄submit_ipcr.php  ---nay sidebar 
-│   ├── 📄view_announcements.php   ---nay sidebar 
+│   ├── 📄submit_ipcr.php  ---> naay sidebar ug topbar
+│   ├── 📄view_announcements.php   ---> naay sidebar ug topbar
 │   ├── 📄view_profile.php 
 │   └── 📄view_submission.php 
 │
@@ -142,6 +142,7 @@ Main tables:
 ├── 📄 login_process.php
 ├── 📄 logout.php
 └── 📄 register.php
+
 
 
 
